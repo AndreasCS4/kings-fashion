@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shirts - KINGS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>
+    <a href="/" style="text-decoration: none; color: inherit;">
+      KINGS
+      <img src="images/crown.png" alt="Crown" class="crown-icon">
+    </a>
+  </h1>
+  <p>Explore our selection of premium Suits</p>
+
+  <div class="products">
+    <div class="item">
+      <img src="images/suit1.jpg" alt="Grey Suit Jacket">
+      <h2>Grey Suit Jacket</h2>
+      <p>€34.99</p>
+      <button onclick="addToCart('Grey Suit Jacket', 34.99)">Add to Cart</button>
+    </div>
+    <div class="item">
+      <img src="images/suit2.jpg" alt="White Suit Jacket">
+      <h2>White Suit Jacket</h2>
+      <p>€44.99</p>
+      <button onclick="addToCart('Grey Suit Jacket', 44.99)">Add to Cart</button>
+    </div>
+    <!-- More shirt items -->
+  </div>
+
+  <hr>
+  <h2>Your Cart</h2>
+  <ul id="cart-list"></ul>
+  <p id="total">Total: €0.00</p>
+  <button onclick="checkout()">Checkout</button>
+
+  <a href="index.html">
+    <button>Home Page</button>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
