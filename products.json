@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "name": "Slim Fit White Shirt",
+    "price": 39.99,
+    "image": "images/shirt1.jpg",
+    "category": "shirts"
+  },
+  {
+    "id": 2,
+    "name": "Linen White Shirt",
+    "price": 59.99,
+    "image": "images/shirt2.jpg",
+    "category": "shirts"
+  },
+  {
+    "id": 3,
+    "name": "Grey Suit Jacket",
+    "price": 99.99,
+    "image": "images/suit1.jpg",
+    "category": "suits"
+  },
+  {
+    "id": 4,
+    "name": "White Suit Jacket",
+    "price": 109.99,
+    "image": "images/suit2.jpg",
+    "category": "suits"
+  },
+  {
+    "id": 5,
+    "name": "Buggy Blue Jeans",
+    "price": 69.99,
+    "image": "images/jean1.jpg",
+    "category": "jeans"
+  },
+  {
+    "id": 6,
+    "name": "Baggy Black Jeans",
+    "price": 79.99,
+    "image": "images/jean2.jpg",
+    "category": "jeans"
+  },
+  {
+    "id": 7,
+    "name": "Oxford Blue Dress Shirt",
+    "price": 44.99,
+    "image": "images/shirt3.jpg",
+    "category": "shirts"
+  },
+  {
+    "id": 8,
+    "name": "Checked Flannel Shirt",
+    "price": 49.99,
+    "image": "images/shirt4.jpg",
+    "category": "shirts"
+  },
+  {
+    "id": 9,
+    "name": "Cotton Black Polo Shirt",
+    "price": 34.99,
+    "image": "images/shirt5.jpg",
+    "category": "shirts"
+  },
+  {
+    "id": 10,
+    "name": "Straight Fit Dark Wash Jeans",
+    "price": 64.99,
+    "image": "images/jean3.jpg",
+    "category": "jeans"
+  },
+  {
+    "id": 11,
+    "name": "Distressed Slim Jeans",
+    "price": 74.99,
+    "image": "images/jean4.jpg",
+    "category": "jeans"
+  },
+  {
+    "id": 12,
+    "name": "Relaxed Fit Grey Jeans",
+    "price": 59.99,
+    "image": "images/jean5.jpg",
+    "category": "jeans"
+  },
+  {
+    "id": 13,
+    "name": "Navy Blue Suit Jacket",
+    "price": 119.99,
+    "image": "images/suit3.jpg",
+    "category": "suits"
+  },
+  {
+    "id": 14,
+    "name": "Charcoal Tailored Suit Jacket",
+    "price": 129.99,
+    "image": "images/suit4.jpg",
+    "category": "suits"
+  }
+]
