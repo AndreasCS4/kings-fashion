@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KINGS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>
+      <a href="index.html" style="text-decoration: none; color: inherit;">
+        KINGS
+        <img src="images/crown.png" alt="Crown" class="crown-icon">
+      </a>
+    </h1>
+    <p>Explore our premium selection</p>
+  </header>
+
+  <main>
+    <p id="total" class="total-display">Total: €0.00</p>
+    <div class="products" id="product-list"></div>
+    <div class="cart-section">
+      <h2>Your Cart</h2>
+      <ul id="cart-list"></ul>
+    </div>
+    <div class="button-group">
+      <a href="index.html"><button class="secondary-btn">Home Page</button></a>
+      <button class="primary-btn" onclick="goToCheckout()">Checkout</button>
+    </div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get("type") || "shirts";
+    let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+
+    document.title = `${category.charAt(0).toUpperCase() + category.slice(1)} - KINGS`;
+
+    function renderCart() {
+      const list = document.getElementById("cart-list");
+      const totalText = document.getElementById("total");
+      list.innerHTML = "";
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <span>${item.name} - €${item.price.toFixed(2)}</span>
+          <button onclick="removeFromCart(${index})" class="remove-btn">🗑️</button>
+        `;
+        list.appendChild(li);
+        total += item.price;
+      });
+
+      totalText.textContent = `Total: €${total.toFixed(2)}`;
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+    function goToCheckout() {
+      if (cart.length === 0) {
+        alert("Cart is empty!");
+        return;
+      }
+      window.location.href = "checkout.html";
+    }
+
+    fetch('products.json')
+      .then(res => res.json())
+      .then(products => {
+        const filtered = products.filter(p => p.category === category);
+        const container = document.getElementById('product-list');
+
+        filtered.forEach(product => {
+          const item = document.createElement('a');
+          item.href = `product.html?id=${product.id}`;
+          item.className = 'item-link';
+          item.innerHTML = `
+            <div class="item">
+              <img src="${product.image}" alt="${product.name}">
+              <h2>${product.name}</h2>
+              <p>€${product.price.toFixed(2)}</p>
+            </div>
+          `;
+          container.appendChild(item);
+        });
+      });
+
+    renderCart();
+  </script>
+</body>
+</html>
